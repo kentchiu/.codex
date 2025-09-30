@@ -1,0 +1,7 @@
+# Ignore everything by default
+*
+
+# Allow Git metadata and the prompts directory
+!/.gitignore
+!/prompts/
+!/prompts/**
