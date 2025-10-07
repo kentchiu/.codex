@@ -25,8 +25,8 @@ Please provide:
 
 I'll analyze this information and work with you to create a comprehensive plan.
 
-Tip: You can also invoke this command with a ticket file directly: `/create_plan .claude/meta/research/tickets/eng_1234.md`
-For deeper analysis, try: `/create_plan think deeply about .claude/meta/research/tickets/eng_1234.md`
+Tip: You can also invoke this command with a ticket file directly: `/plan .ai/rpi/research/tickets/eng_1234.md`
+For deeper analysis, try: `/plan think deeply about .ai/rpi/research/tickets/eng_1234.md`
 ```
 
 Then wait for the user's input.
@@ -36,7 +36,7 @@ Then wait for the user's input.
 ### Step 1: Context Gathering & Initial Analysis
 
 1. **Read all mentioned files immediately and FULLY**:
-   - Ticket files (e.g., `.claude/meta/research/tickets/eng_1234.md`)
+   - Ticket files (e.g., `.ai/rpi/research/tickets/eng_1234.md`)
    - Research documents
    - Related implementation plans
    - Any JSON/data files mentioned
@@ -45,13 +45,13 @@ Then wait for the user's input.
    - **NEVER** read files partially - if a file is mentioned, read it completely
 
 2. **Spawn initial research tasks to gather context**:
-   Before asking the user any questions, use specialized agents to research in parallel:
-   - Use the **codebase-locator** agent to find all files related to the ticket/task
-   - Use the **codebase-analyzer** agent to understand how the current implementation works
-   - If relevant, use the **thoughts-locator** agent to find any existing thoughts documents about this feature
-   - If a Linear ticket is mentioned, use the **linear-ticket-reader** agent to get full details
+   Before asking the user any questions, create focused sub-tasks to research in parallel:
+   - Launch searches that locate all files, configs, and tests related to the ticket or feature
+   - Start analysis tasks that explain how current functionality works and where changes must land
+   - Include reviews of any existing research or plan documents under `.ai/rpi` that might inform the work
+   - When external tickets are mentioned, pull in their full details before proceeding
 
-   These agents will:
+   These investigations should:
    - Find relevant source files, configs, and tests
    - Identify the specific directories to focus on (e.g., if WUI is mentioned, they'll focus on humanlayer-wui/)
    - Trace data flow and key functions
@@ -99,27 +99,27 @@ After getting initial clarifications:
 2. **Create a research todo list** using TodoWrite to track exploration tasks
 
 3. **Spawn parallel sub-tasks for comprehensive research**:
-   - Create multiple Task agents to research different aspects concurrently
-   - Use the right agent for each type of research:
+   - Create multiple targeted tasks to investigate different angles concurrently
+   - Match each task to the question it needs to answer:
 
    **For deeper investigation:**
-   - **codebase-locator** - To find more specific files (e.g., "find all files that handle [specific component]")
-   - **codebase-analyzer** - To understand implementation details (e.g., "analyze how [system] works")
-   - **codebase-pattern-finder** - To find similar features we can model after
+   - Run repository searches that surface files handling the relevant components
+   - Assign analysis tasks to explain how key functions, data flows, or services currently behave
+   - Look for similar features or patterns you can mirror to stay consistent with the codebase
 
    **For historical context:**
-   - **thoughts-locator** - To find any research, plans, or decisions about this area
-   - **thoughts-analyzer** - To extract key insights from the most relevant documents
+   - Read prior research, plans, or notes stored under `.ai/rpi/` that relate to this feature
+   - Capture the takeaways that influence scope, constraints, or stakeholders
 
-   **For related tickets:**
-   - **linear-searcher** - To find similar issues or past implementations
+   **For related tickets or product context:**
+   - Gather details from any referenced tickets or specs so the plan stays aligned with customer needs
 
-   Each agent knows how to:
-   - Find the right files and code patterns
-   - Identify conventions and patterns to follow
-   - Look for integration points and dependencies
-   - Return specific file:line references
-   - Find tests and examples
+   Ensure every task:
+   - Finds the right files and code patterns
+   - Identifies conventions and patterns to follow
+   - Looks for integration points and dependencies
+   - Returns specific file:line references
+   - Surfaces tests and relevant examples
 
 4. **Wait for ALL sub-tasks to complete** before proceeding
 
@@ -169,7 +169,7 @@ Once aligned on approach:
 
 After structure approval:
 
-1. **Write the plan** to `.claude/meta/shared/plans/YYYY-MM-DD-ENG-XXXX-description.md`
+1. **Write the plan** to `.ai/rpi/plans/YYYY-MM-DD-ENG-XXXX-description.md`
    - Format: `YYYY-MM-DD-ENG-XXXX-description.md` where:
      - YYYY-MM-DD is today's date
      - ENG-XXXX is the ticket number (omit if no ticket)
@@ -279,8 +279,8 @@ After structure approval:
 
 ## References
 
-- Original ticket: `.claude/meta/research/tickets/eng_XXXX.md`
-- Related research: `.claude/meta/research/[relevant].md`
+- Original ticket: `.ai/rpi/research/tickets/eng_XXXX.md`
+- Related research: `.ai/rpi/research/[relevant].md`
 - Similar implementation: `[file:line]`
 ````
 
@@ -290,7 +290,7 @@ After structure approval:
 
    ```
    I've created the initial implementation plan at:
-   `.claude/meta/plans/YYYY-MM-DD-ENG-XXXX-description.md`
+   `.ai/rpi/plans/YYYY-MM-DD-ENG-XXXX-description.md`
 
    Please review it and let me know:
    - Are the phases properly scoped?
@@ -350,7 +350,7 @@ After structure approval:
 
 **Always separate success criteria into two categories:**
 
-1. **Automated Verification** (can be run by execution agents):
+1. **Automated Verification** (can be run by automation scripts or tooling):
    - Commands that can be run: `make test`, `npm run lint`, etc.
    - Specific files that should exist
    - Code compilation/type checking
@@ -449,7 +449,7 @@ tasks = [
 User: /implementation_plan
 Assistant: I'll help you create a detailed implementation plan...
 
-User: We need to add parent-child tracking for Claude sub-tasks. See .claude/meta/research/tickets/eng_1478.md
+User: We need to add parent-child tracking for Claude sub-tasks. See .ai/rpi/research/tickets/eng_1478.md
 Assistant: Let me read that ticket file completely first...
 
 [Reads file fully]

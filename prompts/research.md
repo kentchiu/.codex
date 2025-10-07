@@ -1,6 +1,6 @@
 # Research Codebase
 
-You are tasked with conducting comprehensive research across the codebase to answer user questions by spawning parallel sub-agents and synthesizing their findings.
+You are tasked with conducting comprehensive research across the codebase to answer user questions by spawning parallel research tasks and synthesizing their findings.
 
 使用正體中文進行交流及文件撰寫, 如果是專業術語使用英文.
 
@@ -29,29 +29,29 @@ Then wait for the user's research query.
    - Create a research plan using TodoWrite to track all subtasks
    - Consider which directories, files, or architectural patterns are relevant
 
-3. **Spawn parallel sub-agent tasks for comprehensive research:**
-   - Create multiple general-purpose Task agents to research different aspects concurrently
+3. **Spawn parallel research tasks for comprehensive coverage:**
+   - Create multiple targeted tasks to investigate different aspects concurrently
 
-   The key is to use these agents intelligently:
-   - Run multiple agents in parallel when they're searching for different things
-   - Each agent should have a specific, focused research goal
-   - Don't write detailed prompts about HOW to search - the agents already know
-   - Let agents explore directories, search patterns, and read relevant files autonomously
+   The key is to use these tasks intelligently:
+   - Run multiple tasks in parallel when they're searching for different things
+   - Give each task a specific, focused research goal
+   - Don't micromanage how to search—keep prompts outcome-oriented
+   - Let tasks explore directories, search patterns, and read relevant files autonomously
 
-4. **Wait for all sub-agents to complete and synthesize findings:**
-   - IMPORTANT: Wait for ALL sub-agent tasks to complete before proceeding
-   - Compile all sub-agent results (both codebase and meta findings)
+4. **Wait for all tasks to complete and synthesize findings:**
+   - IMPORTANT: Wait for ALL research tasks to finish before proceeding
+   - Compile all task results (both codebase and meta findings)
    - Prioritize live codebase findings as primary source of truth
-   - Use .claude/meta findings as supplementary historical context
+   - Use .ai/rpi findings as supplementary historical context
    - Connect findings across different components
    - Include specific file paths and line numbers for reference
-   - Verify all .claude/meta paths are correct
+   - Verify all .ai/rpi paths are correct
    - Highlight patterns, connections, and architectural decisions
    - Answer the user's specific questions with concrete evidence
 
 5. **Gather metadata for the research document:**
    - generate all relevant metadata
-   - Filename: `.claude/meta/research/YYYY-MM-DD-description.md`
+   - Filename: `.ai/rpi/research/YYYY-MM-DD-description.md`
      - Format: `YYYY-MM-DD-description.md` where:
        - YYYY-MM-DD is today's date
        - description is a brief kebab-case description of the research topic
@@ -114,16 +114,16 @@ Then wait for the user's research query.
 
      [Patterns, conventions, and design decisions discovered]
 
-     ## Historical Context (from .claude/meta)
+     ## Historical Context (from .ai/rpi)
 
-     [Relevant insights from .claude/meta directory with references]
+     [Relevant insights from .ai/rpi directory with references]
 
-     - `.claude/meta/research/previous-research.md` - Related previous research
-     - `.claude/meta/notes.md` - Additional notes
+     - `.ai/rpi/research/previous-research.md` - Related previous research
+     - `.ai/rpi/notes.md` - Additional notes
 
      ## Related Research
 
-     [Links to other research documents in .claude/meta/research/]
+     [Links to other research documents in .ai/rpi/research/]
 
      ## Open Questions
 
@@ -140,30 +140,30 @@ Then wait for the user's research query.
    - Update the frontmatter fields `last_updated` and `last_updated_by` to reflect the update
    - Add `last_updated_note: "Added follow-up research for [brief description]"` to frontmatter
    - Add a new section: `## Follow-up Research [timestamp]`
-   - Spawn new sub-agents as needed for additional investigation
+   - Spawn new focused tasks as needed for additional investigation
    - Continue updating the document and syncing
 
 ## Important notes:
 
-- Always use parallel Task agents to maximize efficiency and minimize context usage
+- Always use parallel research tasks to maximize efficiency and minimize context usage
 - Always run fresh codebase research - never rely solely on existing research documents
-- The .claude/meta directory provides historical context to supplement live findings
+- The .ai/rpi directory provides historical context to supplement live findings
 - Focus on finding concrete file paths and line numbers for developer reference
 - Research documents should be self-contained with all necessary context
-- Each sub-agent prompt should be specific and focused on read-only operations
+- Each task prompt should be specific and focused on read-only operations
 - Consider cross-component connections and architectural patterns
 - Include temporal context (when the research was conducted)
-- Keep the main agent focused on synthesis, not deep file reading
-- Encourage sub-agents to find examples and usage patterns, not just definitions
-- Explore all of .claude/meta directory, not just research subdirectory
+- Keep the main researcher focused on synthesis, not deep file reading
+- Encourage tasks to find examples and usage patterns, not just definitions
+- Explore all of .ai/rpi directory, not just the research subdirectory
 - **File reading**: Always read mentioned files FULLY (no limit/offset) before spawning sub-tasks
 - **Critical ordering**: Follow the numbered steps exactly
   - ALWAYS read mentioned files first before spawning sub-tasks (step 1)
-  - ALWAYS wait for all sub-agents to complete before synthesizing (step 4)
+  - ALWAYS wait for all tasks to complete before synthesizing (step 4)
   - ALWAYS gather metadata before writing the document (step 5 before step 6)
   - NEVER write the research document with placeholder values
-- **Path handling**: Use correct paths under .claude/meta/
-  - Research documents should be placed in `.claude/meta/research/`
+- **Path handling**: Use correct paths under .ai/rpi/
+  - Research documents should be placed in `.ai/rpi/research/`
   - Ensure paths are accurate for navigation and editing
 - **Frontmatter consistency**:
   - Always include frontmatter at the beginning of research documents
