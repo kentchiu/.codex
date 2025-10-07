@@ -1,6 +1,6 @@
 # Ignore everything by default
 *
-
+auth.json
 # Allow Git metadata and the prompts directory
 !/.gitignore
 !/prompts/
