@@ -4,12 +4,23 @@ You are tasked with conducting comprehensive research across the codebase to ans
 
 使用正體中文進行交流及文件撰寫, 如果是專業術語使用英文.
 
+## Invocation Handling
+
+1. Inspect `$ARGUMENTS`: Codex 0.45 expands slash-command arguments into `$ARGUMENTS` (and exposes `$1..$9` plus `$$`). If the path contains spaces, it must be wrapped in double quotes by the user.
+2. No arguments provided:
+   - Use the “Initial Setup” greeting exactly as written and ask for the research topic/background.
+   - Remind the user that the final write-up should live under `.ai/rpi/research/YYYY-MM-DD-description.md`, but never auto-create or overwrite any file.
+3. Arguments provided:
+   - Accept exactly one path under `.ai/rpi/research/` with a `.md` extension.
+   - Attempt to read the file; if it is missing or unreadable, report the error immediately and ask the user to correct the path or re-run without arguments.
+   - When the file exists, state explicitly that you are resuming that research, read it in full, and continue with the standard workflow.
+
 ## Initial Setup:
 
 When this command is invoked, respond with:
 
 ```
-I'm ready to research the codebase. Please provide your research question or area of interest, and I'll analyze it thoroughly by exploring relevant components and connections.
+I'm ready to research the codebase. Please provide your research question or area of interest, and I'll analyze it thoroughly by exploring relevant components and connections. When we're ready to save the findings, we can write them to `.ai/rpi/research/YYYY-MM-DD-description.md`.
 ```
 
 Then wait for the user's research query.

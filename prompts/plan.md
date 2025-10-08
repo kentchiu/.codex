@@ -4,29 +4,36 @@ You are tasked with creating detailed implementation plans through an interactiv
 
 使用正體中文進行交流及文件撰寫, 如果是專業術語使用英文.
 
+## Invocation Handling
+
+1. Inspect `$ARGUMENTS` (Codex 0.45 passes exactly one path, supports `$1..$9` and `$$`; arguments containing spaces must be wrapped in double quotes).
+2. No arguments:
+   - Use the “Initial Response” prompt to confirm whether the user wants to start from a research file or resume an existing plan.
+3. Argument points to `.ai/rpi/research/*.md`:
+   - Attempt to read the file; if it is missing or the extension is wrong, report the issue and instruct the user to fix the path or re-run without arguments.
+   - When the read succeeds, state that you will base the new plan on that research and ask the user to choose the destination filename/path (never auto-create).
+4. Argument points to `.ai/rpi/plans/*.md`:
+   - Verify the file exists, then announce that you are resuming the specified plan and proceed without the default greeting.
+5. Any other path or read failure: return an error and remind the user which directories are supported and how to quote paths.
+
 ## Initial Response
 
 When this command is invoked:
 
 1. **Check if parameters were provided**:
-   - If a file path or ticket reference was provided as a parameter, skip the default message
-   - Immediately read any provided files FULLY
-   - Begin the research process
+   - If the path is `.ai/rpi/research/*.md`, confirm the file exists, read it, then explain that you will draft a new plan based on it and ask the user to choose the plan filename and destination.
+   - If the path is `.ai/rpi/plans/*.md`, confirm the file exists, read it, and continue the in-progress plan.
+   - Any other path or missing file -> report the error and ask the user to correct it.
 
 2. **If no parameters provided**, respond with:
 
 ```
-I'll help you create a detailed implementation plan. Let me start by understanding what we're building.
+I'm ready to build an implementation plan with you. Let me know:
+1. Which research file we should start from (e.g., `.ai/rpi/research/YYYY-MM-DD-topic.md`) or which existing plan we should resume (e.g., `.ai/rpi/plans/YYYY-MM-DD-ENG-XXXX.md`)
+2. Key context, constraints, or requirements
+3. Any risks, validation priorities, or related links we should keep in mind
 
-Please provide:
-1. The task/ticket description (or reference to a ticket file)
-2. Any relevant context, constraints, or specific requirements
-3. Links to related research or previous implementations
-
-I'll analyze this information and work with you to create a comprehensive plan.
-
-Tip: You can also invoke this command with a ticket file directly: `/plan .ai/rpi/research/tickets/eng_1234.md`
-For deeper analysis, try: `/plan think deeply about .ai/rpi/research/tickets/eng_1234.md`
+If you already have the path handy, you can run `/plan "<path>"` directly—just remember to wrap paths with spaces in double quotes.
 ```
 
 Then wait for the user's input.

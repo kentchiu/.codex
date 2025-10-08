@@ -4,10 +4,20 @@ You are tasked with implementing an approved technical plan from `.ai/rpi/plans/
 
 使用正體中文進行交流及文件撰寫, 如果是專業術語使用英文.
 
+## Invocation Handling
+
+1. Inspect `$ARGUMENTS` (Codex 0.45 passes a single path, supports `$1..$9` and `$$`; paths with spaces must be double-quoted).
+2. No arguments: ask the user for the plan file path, or direct them to create one via `/plan` first.
+3. Arguments present:
+   - Accept only `.ai/rpi/plans/*.md`.
+   - Attempt to read the file; if it is missing or invalid, report the issue and tell the user to create/fix the plan before continuing.
+   - When the file exists, confirm that you will continue implementing that plan and follow the “Getting Started” steps.
+
 ## Getting Started
 
 When given a plan path:
 
+- Confirm the file exists under `.ai/rpi/plans/`; if the read fails, ask the user to fix the path or complete `/plan` first
 - Read the plan completely and check for any existing checkmarks (- [x])
 - Read the original ticket and all files mentioned in the plan
 - **Read files fully** - never use limit/offset parameters, you need complete context
