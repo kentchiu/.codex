@@ -1,8 +1,10 @@
+---
+version: 1.0.0
+description: 分析程式碼並自動生成 sequence diagram
+argument-hint: TARGET="[file#method|file|directory]"
+---
 # D2 Sequence
 
-**指令**: `/d2-sequence ['file#method | file | directory']`
-**版本**: v1.0.0
-**功能**: 分析程式碼並自動生成 sequence diagram
 **可用工具**: Bash(d2 *), Write, Read, Bash(which d2), Bash(rm *), Grep, Glob, Task - 建議限制使用這些工具
 
 ---
@@ -184,4 +186,4 @@ brew install d2  # macOS
 
 ## 版本歷史
 
-- [ ] v1.0.0 (2025-08-31) 初始版本 - 手動 D2 語法
+- [ ] v1.0.0 (2025/10/20) 初始版本

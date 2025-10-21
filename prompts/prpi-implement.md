@@ -1,8 +1,10 @@
+---
+version: 1.0.0
+description: 實施已批准的技術計劃，按階段執行並驗證成功標準
+argument-hint: PLAN=<plan-path>
+---
 # Prpi Implement
 
-**指令**: `/prpi-implement <plan-path>`
-**版本**: 1.4.2
-**功能**: 實施已批准的技術計劃，按階段執行並驗證成功標準
 **可用工具**: Read, Write, Edit, Bash, TodoWrite, Task - 建議限制使用這些工具
 
 ---
@@ -17,7 +19,7 @@ You are tasked with implementing an approved technical plan from `.ai/prpi/plans
 **⚠️ 重要 ⚠️ 重要 ⚠️ 重要**
 
 1. KISS 不要過度設計
-2. 務必深思熟慮 (ultrathink)
+2. 務必啟動 Deep Think
 3. 先做計劃,在我同意前不要進行任何操作,如果有不明白的地方要跟我討論, 在計劃完成後,會停止下來要求確認,並且提示已經遵守了上述規範
 4. 必須提供有效的計劃檔案路徑 (`.ai/prpi/plans/*.md`)
 5. 實施前請完整閱讀計劃檔案和相關文件
@@ -314,12 +316,4 @@ Remember: You're implementing a solution, not just checking boxes. Keep the end 
 
 ## 版本歷史
 
-- [ ] v1.4.2 (2025-10-14) 🔴 修正報表生成問題：加強 Completion 章節的強制性指示，確保完成後必定生成實施報告
-- [ ] v1.4.1 (2025-10-14) 更新路徑：.ai/rpi/ → .ai/prpi/，配合指令重命名
-- [ ] v1.4.0 (2025-10-13) 新增完整的實施報告生成步驟，包含 metadata 收集和文件模板
-- [ ] v1.3.2 (2025-10-12) 加入簡化的執行流程總覽章節，提升整體可讀性
-- [ ] v1.3.1 (2025-10-11) 調整 Git 檢查順序：先檢查工作區，再檢查分支，最後才開始實施
-- [ ] v1.3.0 (2025-10-11) 新增 Git 狀態檢查，確保在正確分支且工作區乾淨後才開始實施
-- [ ] v1.2.0 (2025-10-09) 修正 checkbox 更新時機，明確要求每完成一個 item 立即更新
-- [ ] v1.1.0 (2025-10-08) 增加實施完成後的後續行動引導（討論、新工作、結束）
-- [ ] v1.0.0 (2025-10-08) 初始版本
+- [ ] v1.0.0 (2025/10/20) 初始版本

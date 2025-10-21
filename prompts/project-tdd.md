@@ -1,8 +1,10 @@
+---
+version: 1.0.0
+description: 快速 TDD 流程，適用於 bug 修復和小功能增強
+argument-hint: MODE="[--fix|--enhance]" DESCRIPTION="[text]"
+---
 # Project Tdd
 
-**指令**: `/project-tdd [--fix|--enhance] [description]`
-**版本**: v1.2.0
-**功能**: 快速 TDD 流程，適用於 bug 修復和小功能增強
 **可用工具**: Bash, Read, Write, Edit, MultiEdit, TodoWrite, Glob, Grep - 建議限制使用這些工具
 
 ---
@@ -15,7 +17,7 @@
 **⚠️ 重要 ⚠️ 重要 ⚠️ 重要**
 
 1. KISS 不要過度設計
-2. 務必深思熟慮 (ultrathink)
+2. 務必啟動 Deep Think
 3. 先做計劃,在我同意前不要進行任何操作,如果有不明白的地方要跟我討論, 在計劃完成後,會停止下來要求確認,並且提示已經遵守了上述規範
 
 ## 核心邏輯
@@ -181,7 +183,4 @@
 
 ## 版本歷史
 
-- [ ] v1.2.0 (2025-09-10) 改進互動流程：先確認類型，再透過對話收集描述
-- [ ] v1.1.0 (2025-09-10) 加入參數驗證，確保有描述才執行，無描述時主動詢問
-- [ ] v1.0.0 (2025-01-30) 初始版本，整合 fix 和 enhance 功能
-
+- [ ] v1.0.0 (2025/10/20) 初始版本

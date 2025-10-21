@@ -1,8 +1,10 @@
+---
+version: 1.0.0
+description: 互動式專案規劃問卷，收集需求產生 project-plan.md
+argument-hint: IDEA="[project-name-or-thought]"
+---
 # Project Start
 
-**指令**: `/project-start ['專案名稱或初步想法']`
-**版本**: v2.0.0
-**功能**: 互動式專案規劃問卷，收集需求產生project-plan.md
 **可用工具**: Write - 建議限制使用這些工具
 
 ---
@@ -20,7 +22,7 @@
 
 1. KISS 不要過度設計
 2. 先做計劃,在我同意前不要進行任何操作,如果有不明白的地方要跟我討論
-3. 務必深思熟慮 (ultrathink)
+3. 務必啟動 Deep Think
 
 ## 🔧 執行流程
 
@@ -145,7 +147,8 @@ $ [指令範例]
 - [ ] 根據專案類型調整問題內容
 
 ## 版本歷史
-- [ ] v2.0.0 (2025-08-17) 標準化格式，增加 allowed-tools，統一注意事項
-- [ ] v1.0.0 (原始日期) 初始版本
+- [ ] v1.0.0 (2025/10/20) 初始版本
 
 ```
+# Project Start
+# Project Start

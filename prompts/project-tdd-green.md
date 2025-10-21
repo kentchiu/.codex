@@ -1,8 +1,10 @@
+---
+version: 1.0.0
+description: 實作最簡單的程式碼讓測試通過
+argument-hint: TARGET="[test-file-or-feature]"
+---
 # Project Tdd Green
 
-**指令**: `/project-tdd-green ['測試檔案或功能名稱']`
-**版本**: v2.0.0
-**功能**: 實作最簡單的程式碼讓測試通過
 **可用工具**: Read, Edit, Bash - 建議限制使用這些工具
 
 ---
@@ -258,7 +260,7 @@ def calculate_discount(price, customer_type):
 
 1. KISS 不要過度設計
 2. 先做計劃,在我同意前不要進行任何操作,如果有不明白的地方要跟我討論
-3. 務必深思熟慮 (ultrathink)
+3. 務必啟動 Deep Think
 
 ## ⚠️ 注意事項
 
@@ -270,5 +272,4 @@ def calculate_discount(price, customer_type):
 
 ## 版本歷史
 
-- [ ] v2.0.0 (2025-08-17) 標準化格式，增加 allowed-tools，統一注意事項
-- [ ] v1.0.0 (原始日期) 初始版本
+- [ ] v1.0.0 (2025/10/20) 初始版本

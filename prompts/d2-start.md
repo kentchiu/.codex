@@ -1,8 +1,10 @@
+---
+version: 1.0.0
+description: 進入 D2 編輯模式，後續對話遵循 CLAUDE.md D2 規範
+argument-hint: FILE=<filename>
+---
 # D2 Start
 
-**指令**: `/d2-start <filename>`
-**版本**: 1.2.0
-**功能**: 進入 D2 編輯模式，後續對話遵循 CLAUDE.md D2 規範
 **可用工具**: Read, Write, Edit, Bash - 建議限制使用這些工具
 
 ---
@@ -91,7 +93,4 @@ curl -I "https://api.iconify.design/material-symbols/database.svg" 2>/dev/null |
 
 ## 📋 版本歷史
 
-### v1.2.0 (2025-08-17) 添加語法限制指引，禁用 text block 和 legend
-### v1.1.0 (2025-08-17) 限定使用 Material Icon
-### v1.0.0 (2025-08-17) 基本 D2 編輯模式啟動
-
+- [ ] v1.0.0 (2025/10/20) 初始版本

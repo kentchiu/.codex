@@ -1,8 +1,10 @@
+---
+version: 1.0.0
+description: 檢視 issue 詳細資訊和計劃
+argument-hint: ISSUE=<issue-number>
+---
 # Rpm Issue View
 
-**指令**: `/rpm-issue-view issue編號`
-**版本**: 2.0.0
-**功能**: 檢視 issue 詳細資訊和計劃
 **可用工具**: mcp__gitlab-server__get_issue, Read - 建議限制使用這些工具
 
 ---
@@ -38,5 +40,4 @@
 4. 提示目前分支狀態（是否在對應的 issue 分支上）
 
 ## 版本歷史
-- [ ] v1.0.0 (2024-01-01) 初始版本
-- [ ] v2.0.0 (2025-08-17) 加入歷史版本信息
+- [ ] v1.0.0 (2025/10/20) 初始版本

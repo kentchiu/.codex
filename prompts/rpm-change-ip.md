@@ -1,8 +1,10 @@
+---
+version: 1.0.0
+description: 切換 API endpoint server
+argument-hint: TARGET="[server-number|ip]"
+---
 # Change Ip
 
-**指令**: `/change-ip server編號(194/197/198)或IP位址`
-**版本**: 2.0.0
-**功能**: 切換 API endpoint server
 **可用工具**: Read, Edit, MultiEdit - 建議限制使用這些工具
 
 ---
@@ -45,5 +47,4 @@
 - [ ] MQTT URL 格式為 wss://{IP}:9001/mqtt
 
 ## 版本歷史
-- [ ] v1.0.0 (2024-01-01) 初始版本
-- [ ] v2.0.0 (2025-08-17) 加入歷史版本信息
+- [ ] v1.0.0 (2025/10/20) 初始版本

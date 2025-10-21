@@ -1,8 +1,9 @@
+---
+version: 1.0.0
+description: 執行 rpm-issue-image.sh 下載 GitLab issue 的圖片
+argument-hint: ISSUE="[issue-number]"
+---
 # RPM Issue Image Script Wrapper
-
-**指令**: `/rpm-issue-image-wrapper [issue-number]`
-**版本**: wrapper-v1.0.0
-**功能**: 執行 rpm-issue-image.sh 下載 GitLab issue 的圖片
 
 > ⚠️ **RPM 專案專用**
 > 此工具專為 rpm6/app/doc 專案設計。
@@ -61,3 +62,7 @@ bash /home/kent/cc2cx/codex/rpm-issue-image.sh 673
 ---
 
 **請告訴我要處理哪個 issue number？**
+
+## 版本歷史
+
+- [ ] v1.0.0 (2025/10/20) 初始版本

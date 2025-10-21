@@ -1,8 +1,10 @@
+---
+version: 1.0.0
+description: 從 GitLab API 文檔生成 Pinia 3 stores
+argument-hint: SOURCE="<api-doc-or-endpoint>"
+---
 # Rpm Codegen Api
 
-**指令**: `/rpm-codegen-api API文檔或端點選擇`
-**版本**: 2.0.0
-**功能**: 從 GitLab API 文檔生成 Pinia 3 stores
 **可用工具**: Read, Write, MultiEdit, Glob, Grep, mcp__gitlab-server__get_file_contents, TodoWrite - 建議限制使用這些工具
 
 ---
@@ -51,6 +53,4 @@
 
 ## 版本歷史
 
-- [ ] v2.0.0 (2025-08-17) 加入歷史版本信息
-- [ ] v1.0.0 (2024-01-01) 初始版本
-
+- [ ] v1.0.0 (2025/10/20) 初始版本

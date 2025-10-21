@@ -1,8 +1,10 @@
+---
+version: 1.0.0
+description: 更新指定 server 的 API Token
+argument-hint: TARGET="[server-number|ip]"
+---
 # Rpm Codegen Auth
 
-**指令**: `/rpm-codegen-auth server編號(194/197/198)或IP位址，預設197`
-**版本**: 2.1.0
-**功能**: 更新指定 server 的 API Token
 **可用工具**: Bash, Edit, Read - 建議限制使用這些工具
 
 ---
@@ -68,6 +70,4 @@
 
 ## 版本歷史
 
-- [ ] v2.1.0 (2025-08-21) 支援多 server 參數選擇(194/197/198)，預設194
-- [ ] v2.0.0 (2025-08-17) 加入歷史版本信息
-- [ ] v1.0.0 (2024-01-01) 初始版本
+- [ ] v1.0.0 (2025/10/20) 初始版本

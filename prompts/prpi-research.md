@@ -1,8 +1,10 @@
+---
+version: 1.0.0
+description: 透過並行研究任務全面分析程式碼庫
+argument-hint: RESEARCH="[research-path]"
+---
 # Prpi Research
 
-**指令**: `/prpi-research [research-path]`
-**版本**: 1.3.3
-**功能**: 透過並行研究任務全面分析程式碼庫
 **可用工具**: Read, Write, Edit, Task, TodoWrite, Grep, Glob, Bash - 建議限制使用這些工具
 
 ---
@@ -17,7 +19,7 @@ You are tasked with conducting comprehensive research across the codebase to ans
 **⚠️ 重要 ⚠️ 重要 ⚠️ 重要**
 
 1. KISS 不要過度設計
-2. 務必深思熟慮 (ultrathink)
+2. 務必啟動 Deep Think
 3. 先做計劃,在我同意前不要進行任何操作,如果有不明白的地方要跟我討論, 在計劃完成後,會停止下來要求確認,並且提示已經遵守了上述規範
 4. **Research 階段職責邊界**：
    - [ ] ✅ **探索與發現**：程式碼結構、設計模式、問題點、技術可行性
@@ -85,7 +87,7 @@ Then wait for the user's research query.
 
 2. **Analyze and decompose the research question:**
    - [ ] Break down the user's query into composable research areas
-   - [ ] Take time to ultrathink about the underlying patterns, connections, and architectural implications the user might be seeking
+   - [ ] Take time to Deep Think about the underlying patterns, connections, and architectural implications the user might be seeking
    - [ ] Identify specific components, patterns, or concepts to investigate
    - [ ] Create a research plan using TodoWrite to track all subtasks
    - [ ] Consider which directories, files, or architectural patterns are relevant
@@ -301,10 +303,4 @@ Then wait for the user's research query.
 
 ## 版本歷史
 
-- [ ] v1.3.3 (2025-10-14) 更新路徑：.ai/rpi/ → .ai/prpi/，配合指令重命名
-- [ ] v1.3.2 (2025-10-12) 簡化執行流程總覽，只保留流程步驟，移除實做細節
-- [ ] v1.3.1 (2025-10-12) 加入繁體中文執行流程總覽章節，提升整體可讀性和新用戶理解速度
-- [ ] v1.3.0 (2025-10-09) 加入視覺化原則，報告模板新增 Mermaid 圖表和表格範例
-- [ ] v1.2.0 (2025-10-09) 明確 Research 階段職責邊界，禁止過多實施細節，強化文檔規範說明
-- [ ] v1.1.0 (2025-10-08) 增加研究結束後的後續行動引導（討論其他議題或執行 rpi:plan）
-- [ ] v1.0.0 (2025-10-08) 初始版本
+- [ ] v1.0.0 (2025/10/20) 初始版本

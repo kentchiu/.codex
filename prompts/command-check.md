@@ -1,8 +1,10 @@
+---
+version: 1.0.0
+description: Codex commands 健康檢查，支援單一、批量與全域分析
+argument-hint: PATTERN="[namespace:command]"
+---
 # Command Check
 
-**指令**: `/command-check ['command-name-pattern']`
-**版本**: v1.1.0
-**功能**: Claude Code commands 健康檢查 - 支援單一/批量/全域分析
 **可用工具**: Read, Bash, Glob, Grep, LS, TodoWrite - 建議限制使用這些工具
 
 ---
@@ -15,7 +17,7 @@
 **⚠️ 重要 ⚠️ 重要 ⚠️ 重要**
 
 1. KISS 不要過度設計
-2. 務必深思熟慮 (ultrathink)
+2. 務必啟動 Deep Think
 3. 先做計劃,在我同意前不要進行任何操作,如果有不明白的地方要跟我討論, 在計劃完成後,會停止下來要求確認,並且提示已經遵守了上述規範
 4. 遵循官網的 Slash Command 規範: https://docs.anthropic.com/en/docs/claude-code/slash-commands
 
@@ -256,5 +258,4 @@
 
 ## 版本歷史
 
-- [ ] v1.1.0 (2025-08-20) 執行計劃加入確認步驟跟Codex CLI 文件
-- [ ] v1.0.0 (2025-08-17) 初始版本
+- [ ] v1.0.0 (2025/10/20) 初始版本

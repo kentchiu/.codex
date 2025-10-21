@@ -1,8 +1,10 @@
+---
+version: 1.0.0
+description: 合併 issue 分支到 master 並記錄處理歷程
+argument-hint: ISSUE="<issue-number>"
+---
 # Rpm Issue Merge
 
-**指令**: `/rpm-issue-merge ['issue編號']`
-**版本**: 2.0.0
-**功能**: 合併 issue 分支到 master 並記錄處理歷程
 **可用工具**: mcp__gitlab-server__get_issue, Bash, Read, Write - 建議限制使用這些工具
 
 ---
@@ -69,6 +71,4 @@
 
 ## 版本歷史
 
-- [ ] v1.0.0 (2024-01-01) 初始版本
-- [ ] v2.0.0 (2025-08-17) 加入歷史版本信息
-
+- [ ] v1.0.0 (2025/10/20) 初始版本

@@ -1,8 +1,10 @@
+---
+version: 1.0.0
+description: 同步 GitLab boardKind.md 選單配置到本地，支援多種同步模式
+argument-hint: TARGET="[board-name|menu-item]"
+---
 # Rpm Codegen Menu
 
-**指令**: `/rpm-codegen-menu 電路板名稱或選單項目`
-**版本**: 2.0.0
-**功能**: 同步 GitLab boardKind.md 選單配置到本地，支援多種同步模式
 **可用工具**: mcp__gitlab-server__get_file_contents, Read, MultiEdit, Bash, TodoWrite - 建議限制使用這些工具
 
 ---
@@ -352,5 +354,4 @@ const boardMenuMap = {
 
 ## 版本歷史
 
-- [ ] v2.0.0 (2025-08-17) 加入歷史版本信息
-- [ ] v1.0.0 (2024-01-01) 初始版本
+- [ ] v1.0.0 (2025/10/20) 初始版本

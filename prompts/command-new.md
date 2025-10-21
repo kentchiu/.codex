@@ -1,11 +1,12 @@
+---
+version: 1.0.0
+description: 建立新的 Codex command - 基於 User Story 問卷快速生成最簡可工作版本
+argument-hint: COMMAND=<command-name> DESCRIPTION="<description>"
+---
 # Command New
 
-**指令**: `/command-new <command-name> <description>`
-**版本**: v1.3.1
-**功能**: 建立新的 Claude Code command - 基於 User Story 問卷快速生成最簡可工作版本
 **可用工具**: Read, Write, Edit, Bash, Glob, Grep, LS, TodoWrite - 建議限制使用這些工具
 
----
 # 建立新 Command
 
 快速建立最簡可工作的 Codex CLI commands，遵循 KISS 原則。
@@ -15,7 +16,7 @@
 **⚠️ 重要 ⚠️ 重要 ⚠️ 重要**
 
 1. KISS 不要過度設計
-2. 務必深思熟慮 (ultrathink)
+2. 務必啟動 Deep Think
 3. 先做計劃,在我同意前不要進行任何操作,如果有不明白的地方要跟我討論, 在計劃完成後,會停止下來要求確認,並且提示已經遵守了上述規範
 4. 遵循官網的 Slash Command 規範: https://docs.anthropic.com/en/docs/claude-code/slash-commands
 
@@ -114,7 +115,7 @@ So that **\_**
 description: 關閉指定的 GitHub issue
 argument-hint: [issue-number]
 allowed-tools: Bash(gh *), Bash(git *)
-version: v1.0.0
+version: 1.0.0
 ---
 
 # 關閉 GitHub Issue
@@ -126,7 +127,7 @@ version: v1.0.0
 **⚠️ 重要 ⚠️ 重要 ⚠️ 重要**
 
 1. KISS 不要過度設計
-2. 務必深思熟慮 (ultrathink)
+2. 務必啟動 Deep Think
 3. 先做計劃,在我同意前不要進行任何操作,如果有不明白的地方要跟我討論, 在計劃完成後,會停止下來要求確認,並且提示已經遵守了上述規範
 
 ## 核心邏輯
@@ -158,7 +159,7 @@ version: v1.0.0
 
 ## 版本歷史
 
-- [ ] v1.0.0 (2025-08-17) 初始版本
+- [ ] v1.0.0 (2025/10/20) 初始版本
 ```
 
 ---
@@ -167,8 +168,4 @@ version: v1.0.0
 
 ## 版本歷史
 
-- [ ] v1.3.1 (2025-08-26) 修正路徑格式：./claude → .claude (隱藏目錄)
-- [ ] v1.3.0 (2025-08-25) 修正 namespace:command 路徑處理邏輯，支援子目錄結構
-- [ ] v1.2.0 (2025-08-20) 執行計劃加入確認步驟跟Codex CLI 文件
-- [ ] v1.1.0 (2025-08-18) 修正路徑 scope：改為 project scope 而非 user scope
-- [ ] v1.0.0 (2025-08-17) 初始版本
+- [ ] v1.0.0 (2025/10/20) 初始版本

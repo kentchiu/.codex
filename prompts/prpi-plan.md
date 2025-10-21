@@ -1,8 +1,10 @@
+---
+version: 1.0.0
+description: 透過互動式流程建立詳細的實施計劃
+argument-hint: INPUT="[research-path|plan-path]"
+---
 # Prpi Plan
 
-**指令**: `/prpi-plan [research-path | plan-path]`
-**版本**: 1.1.2
-**功能**: 透過互動式流程建立詳細的實施計劃
 **可用工具**: Read, Write, Edit, Task, TodoWrite, Bash - 建議限制使用這些工具
 
 ---
@@ -17,7 +19,7 @@ You are tasked with creating detailed implementation plans through an interactiv
 **⚠️ 重要 ⚠️ 重要 ⚠️ 重要**
 
 1. KISS 不要過度設計
-2. 務必深思熟慮 (ultrathink)
+2. 務必啟動 Deep Think
 3. 先做計劃,在我同意前不要進行任何操作,如果有不明白的地方要跟我討論, 在計劃完成後,會停止下來要求確認,並且提示已經遵守了上述規範
 4. 在 plan mode 下, 只進行實施計劃的編寫, 不進行任何實做
 
@@ -527,7 +529,4 @@ Based on the ticket, I understand we need to track parent-child relationships fo
 
 ## 版本歷史
 
-- [ ] v1.1.2 (2025-10-14) 更新路徑：.ai/rpi/ → .ai/prpi/，配合指令重命名
-- [ ] v1.1.1 (2025-10-12) 加入簡化的執行流程總覽章節，提升整體可讀性
-- [ ] v1.1.0 (2025-10-08) 增加計劃完成後的後續行動引導（討論、執行 rpi:implement、結束）
-- [ ] v1.0.0 (2025-10-08) 初始版本
+- [ ] v1.0.0 (2025/10/20) 初始版本

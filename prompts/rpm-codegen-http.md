@@ -1,8 +1,10 @@
+---
+version: 1.0.0
+description: 生成 REST Client 測試文件（.http 格式）供 API 測試使用
+argument-hint: TARGET="[service|service/endpoint]"
+---
 # Rpm Codegen Http
 
-**指令**: `/rpm-codegen-http 服務名稱或端點`
-**版本**: 2.0.0
-**功能**: 生成 REST Client 測試文件（.http 格式）供 API 測試使用
 **可用工具**: Read, Grep, MultiEdit, TodoWrite, mcp__gitlab-server__get_file_contents - 建議限制使用這些工具
 
 ---
@@ -266,6 +268,4 @@ Content-Type: application/json
 
 ## 版本歷史
 
-- [ ] v2.0.0 (2025-08-17) 加入歷史版本信息
-- [ ] v1.0.0 (2024-01-01) 初始版本
-
+- [ ] v1.0.0 (2025/10/20) 初始版本

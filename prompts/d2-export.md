@@ -1,7 +1,12 @@
+---
+version: 1.0.0
+description: D2 檔案轉換工具，使用 elk 佈局與 sketch 手繪風格
+argument-hint: FILE=<d2-file-path> FORMAT="[svg|png]"
+---
 # D2 Export
 
 **指令**: `/d2-export <d2-file-path> [format]`
-**版本**: v1.1.0
+**版本**: v1.0.0
 **功能**: D2 檔案轉換工具，使用 elk 佈局和手繪風格
 **可用工具**: Bash(d2 *), Read, Write, Edit - 建議限制使用這些工具
 
@@ -51,4 +56,6 @@ d2 --layout=elk --sketch input.d2 output.png
 
 **符合 KISS 原則**: 最簡可工作版本，專注核心轉換功能。
 
-ARGUMENTS: <d2-file-path> [format]
+## 版本歷史
+
+- [ ] v1.0.0 (2025/10/20) 初始版本

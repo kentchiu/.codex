@@ -1,8 +1,10 @@
+---
+version: 1.0.0
+description: 引導式撰寫高質量 User Stories，確保符合 INVEST 原則
+argument-hint: TOPIC="[feature-or-module]"
+---
 # Project Story Write
 
-**指令**: `/project-story-write ['功能名稱或模組']`
-**版本**: v2.0.0
-**功能**: 引導式撰寫高質量User Stories，確保符合INVEST原則
 **可用工具**: Read, Write, Edit - 建議限制使用這些工具
 
 ---
@@ -19,7 +21,7 @@
 ## 🚨 注意
 
 1. 先做計劃,在我同意前不要進行任何操作,如果有不明白的地方要跟我討論.
-2. 務必深思熟慮 (ultrathink)
+2. 務必啟動 Deep Think
 3. **任務清單**：
 
 
@@ -200,5 +202,4 @@ Epic: 用戶管理系統
 - [ ] 根據實際開發調整和分割 Stories
 
 ## 版本歷史
-- [ ] v2.0.0 (2025-08-17) 標準化格式，增加 allowed-tools，統一注意事項
-- [ ] v1.0.0 (原始日期) 初始版本
+- [ ] v1.0.0 (2025/10/20) 初始版本

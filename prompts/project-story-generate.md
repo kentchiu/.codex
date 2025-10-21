@@ -1,8 +1,10 @@
+---
+version: 1.0.0
+description: 從專案規劃文檔自動生成標準格式的 User Stories
+argument-hint: PLAN="<project-plan-path>"
+---
 # Project Story Generate
 
-**指令**: `/project-story-generate ['專案初始計劃文件路徑']`
-**版本**: v2.0.0
-**功能**: 從專案規劃文檔自動生成標準格式的User Stories
 **可用工具**: Read, Write - 建議限制使用這些工具
 
 ---
@@ -23,7 +25,7 @@
 這個指令很重要, 指令的結果會很大幅度的影響我工作的效率,所以, 務必遵守以下規範:
 
 1. 先做計劃,在我同意前不要進行任何操作,如果有不明白的地方要跟我討論.
-2. 務必深思熟慮 (ultrathink)
+2. 務必啟動 Deep Think
 
 ## ⚠️ 注意事項
 
@@ -216,5 +218,4 @@ So that 我可以在終端工作時快速記錄待辦事項
 - [ ] `/project:tdd-red` - 基於 Story 開始 TDD
 
 ## 版本歷史
-- [ ] v2.0.0 (2025-08-17) 標準化格式，增加 allowed-tools，統一注意事項
-- [ ] v1.0.0 (原始日期) 初始版本
+- [ ] v1.0.0 (2025/10/20) 初始版本

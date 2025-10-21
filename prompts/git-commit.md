@@ -1,8 +1,10 @@
+---
+version: 1.0.0
+description: 以目前修改內容做 git commit，遵循 Conventional Commits 規範並添加 emoji
+argument-hint: MESSAGE="[message]"
+---
 # Git Commit
 
-**指令**: `/git-commit ['message']`
-**版本**: v1.2.0
-**功能**: 以目前修改內容做 git commit，遵循 Conventional Commits 規範並添加 emoji
 **可用工具**: Bash(git \*) - 建議限制使用這些工具
 
 ---
@@ -88,6 +90,4 @@
 
 ## 版本歷史
 
-- [ ] v1.2.0 (2025-08-19) 加入強制用戶確認機制，防止直接執行 commit
-- [ ] v1.1.0 (2025-08-19) 禁用 Claude attribution，保持 commit message 純淨
-- [ ] v1.0.0 (2025-08-19) 初始版本，支援自動類型判斷和 emoji
+- [ ] v1.0.0 (2025/10/20) 初始版本

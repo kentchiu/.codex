@@ -1,8 +1,10 @@
+---
+version: 1.0.0
+description: 基於 User Story 撰寫單一失敗的測試案例，使用 BDD 格式開始 TDD 循環
+argument-hint: STORY="[story-id]"
+---
 # Project Tdd Red
 
-**指令**: `/project-tdd-red ['Story ID']`
-**版本**: v2.0.0
-**功能**: 基於 User Story 撰寫單一失敗的測試案例，使用 BDD 格式開始 TDD 循環
 **可用工具**: Read, Write, Edit, Bash, Glob, Grep - 建議限制使用這些工具
 
 ---
@@ -369,7 +371,7 @@ tests/test_story_[編號]_[功能名稱].py
 
 1. KISS 不要過度設計
 2. 先做計劃,在我同意前不要進行任何操作,如果有不明白的地方要跟我討論
-3. 務必深思熟慮 (ultrathink)
+3. 務必啟動 Deep Think
 
 ## ⚠️ 注意事項
 
@@ -381,5 +383,4 @@ tests/test_story_[編號]_[功能名稱].py
 
 ## 版本歷史
 
-- [ ] v2.0.0 (2025-08-17) 標準化格式，增加 allowed-tools，統一注意事項
-- [ ] v1.0.0 (原始日期) 初始版本
+- [ ] v1.0.0 (2025/10/20) 初始版本

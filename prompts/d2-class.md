@@ -1,3 +1,8 @@
+---
+version: 1.0.0
+description: 分析程式碼並自動生成 D2 class diagram
+argument-hint: TARGET="<file|directory|pattern>"
+---
 # D2 Class
 
 **指令**: `/d2-class ['file | directory | pattern']`
@@ -222,4 +227,4 @@ brew install d2  # macOS
 
 ## 版本歷史
 
-- [ ] v1.0.0 (2025-08-31) 初始版本 - Class diagram 自動生成
+- [ ] v1.0.0 (2025/10/20) 初始版本

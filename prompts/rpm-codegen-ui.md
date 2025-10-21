@@ -1,8 +1,10 @@
+---
+version: 1.0.0
+description: 根據 issue 工作檔案生成 Vue 元件
+argument-hint: ISSUE=<issue-number>
+---
 # Rpm Codegen Ui
 
-**指令**: `/rpm-codegen-ui issue編號`
-**版本**: 2.0.0
-**功能**: 根據 issue 工作檔案生成 Vue 元件
 **可用工具**: Read, Write, MultiEdit, Glob, Grep, mcp__context7__resolve-library-id, mcp__context7__get-library-docs, TodoWrite - 建議限制使用這些工具
 
 ---
@@ -45,7 +47,7 @@
 
 ## 🎯 核心原則
 
-1. **深度思考優先**：使用 ultrathink 模式制定詳細計劃
+1. **深度思考優先**：使用 Deep Think 模式制定詳細計劃
 2. **遵循專案既有模式**：參考現有模組實現，而非外部標準
 3. **規範優先於視覺設計**：視覺設計僅供參考，實現必須符合專案規範
 4. **整合 Issue 工作流程**：從工作檔案自動獲取所需資訊
@@ -263,9 +265,9 @@ message: "確定要刪除這個項目嗎？"      // 應該用 common.action.con
 ☐ 已生成所有必要的組件檔案
 ```
 
-### 第一階段：深度分析與計劃 (ultrathink)
+### 第一階段：深度分析與計劃 (啟動 Deep Think)
 
-> 🧠 **IMPORTANT: 使用 ultrathink 深度思考模式**
+> 🧠 **IMPORTANT: 使用 Deep Think 深度思考模式**
 >
 > 進行全面分析，考慮所有可能的 UI 實現方案。
 > 思考時間不受限制，確保分析徹底且完整。
@@ -390,7 +392,7 @@ if (圖片包含列表/表格 + 編輯表單) {
 
 #### 1.4 深度思考分析
 
-使用 ultrathink 分析選定模式的實現細節：
+使用 Deep Think 分析選定模式的實現細節：
 
 1. **架構實現細節**
    - [ ] 根據選定模式規劃檔案
@@ -1246,5 +1248,4 @@ console.log(`
 
 ## 版本歷史
 
-- [ ] v2.0.0 (2025-08-17) 加入歷史版本信息
-- [ ] v1.0.0 (2024-01-01) 初始版本
+- [ ] v1.0.0 (2025/10/20) 初始版本

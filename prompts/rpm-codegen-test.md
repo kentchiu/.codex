@@ -1,8 +1,10 @@
+---
+version: 1.0.0
+description: 生成測試代碼 (Unit/Integration/E2E)
+argument-hint: TARGET="[path]" TYPE="[unit|integration|e2e]"
+---
 # Rpm Codegen Test
 
-**指令**: `/rpm-codegen-test 檔案路徑或測試類型`
-**版本**: 2.0.0
-**功能**: 生成測試代碼 (Unit/Integration/E2E)
 **可用工具**: Read, Write, MultiEdit, Glob, Grep, TodoWrite - 建議限制使用這些工具
 
 ---
@@ -301,6 +303,4 @@ describe("useUserStore", () => {
 
 ## 版本歷史
 
-- [ ] v2.0.0 (2025-08-17) 加入歷史版本信息
-- [ ] v1.0.0 (2024-01-01) 初始版本
-
+- [ ] v1.0.0 (2025/10/20) 初始版本
